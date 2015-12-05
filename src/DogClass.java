@@ -19,6 +19,11 @@ public class DogClass {
 		return Name;
 	}
 	
+	//getter for DogClass TailLength attribute
+	public double getTailLength() {
+		return TailLength;
+	}
+		
     //setter for tail length
 	public void calculateTailLength(String Breed, int Age, double Weight){
 		double length;

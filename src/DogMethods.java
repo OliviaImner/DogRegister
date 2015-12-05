@@ -48,7 +48,10 @@ public class DogMethods {
 	//list method
 	void ListCommand(ArrayList<DogClass> currentRegister) {
 		System.out.print("Please enter a tail length: ");
-
+		int userTail = Keyboard.nextInt();
+	    Keyboard.nextLine();
+	    
+	    
 	}
 
 }
