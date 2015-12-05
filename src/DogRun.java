@@ -30,6 +30,7 @@ public class DogRun {
 		    		makeRegister.printRegister( myRegister );
 		    	} else if(Command.equals("list")) {
 		    		//list method
+		    		myMethods.ListCommand( myRegister );
 		    	} else {
 		    		//exit
 		    		System.out.print("\nGoodbye!");
