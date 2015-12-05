@@ -8,7 +8,8 @@ public class DogRun {
 		DogRegister makeRegister = new DogRegister();
 		ArrayList<DogClass> myRegister = makeRegister.makePrimaryRegister();
 		makeRegister.printRegister( myRegister );
-				
+		
+		
 		//load methods
 		DogMethods myMethods = new DogMethods();
 				
@@ -26,7 +27,7 @@ public class DogRun {
 		    		makeRegister.printRegister( myRegister );
 		    	} else if(Command.equals("delete")) {
 			   		//delete method
-		    		myRegister = myMethods.DeleteCommmand( myRegister );
+		    		myRegister = myMethods.DeleteCommmand(myRegister);
 		    		makeRegister.printRegister( myRegister );
 		    	} else if(Command.equals("list")) {
 		    		//list method
