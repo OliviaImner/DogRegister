@@ -15,6 +15,7 @@ public class DogRegister {
 				
 			for( int i=0; i<5; i++ ) {
 				DogClass currentDog = new DogClass(NameArray[i], BreedArray[i], AgeArray[i], WeightArray[i]);
+				currentDog.calculateTailLength(BreedArray[i], AgeArray[i], WeightArray[i]);
 				DogArrayList.add(currentDog);
 			}
 			return DogArrayList;

@@ -20,7 +20,7 @@ public class DogClass {
 	}
 	
     //setter for tail length
-	public void calculateTailLength(String Breed, int Age, int Weight){
+	public void calculateTailLength(String Breed, int Age, double Weight){
 		double length;
 		if( Breed.equals("tax")) {
 			length = 3.7; 

@@ -23,6 +23,7 @@ public class DogMethods {
 			//Keyboard.close(); //closing standard in here results in an error since its still needed in "main"
 
 			DogClass newDog = new DogClass(Name, Breed, Age, Weight);
+			newDog.calculateTailLength(Breed, Age, Weight);
 			currentRegister.add(newDog);
 
 		    return currentRegister;
@@ -46,7 +47,8 @@ public class DogMethods {
 	
 	//list method
 	void ListCommand(ArrayList<DogClass> currentRegister) {
-		
+		System.out.print("Please enter a tail length: ");
+
 	}
 
 }
