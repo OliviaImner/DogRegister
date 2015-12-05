@@ -35,7 +35,7 @@ public class DogMethods {
 	    String toDelete = Keyboard.nextLine();
 	    
 		int size = currentRegister.size();
-		for( int i=0; i < size; i++ ) {
+		for( int i = 0; i < size; i++ ) {
 			DogClass currentDog = currentRegister.get(i);
 			String dogName = currentDog.getName();
 			if(dogName.equals(toDelete)){

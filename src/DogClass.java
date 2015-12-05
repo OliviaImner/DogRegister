@@ -30,7 +30,7 @@ public class DogClass {
 		if( Breed.equals("tax")) {
 			length = 3.7; 
  	    } else { 
- 	    	length = (Age * Weight) / 10; //for some reason this will not show any numbers < 1
+ 	    	length = (Age * Weight) / 10;
  	    }
 		this.TailLength = length;
 	}

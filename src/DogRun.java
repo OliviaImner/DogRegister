@@ -26,7 +26,7 @@ public class DogRun {
 		    		makeRegister.printRegister( myRegister );
 		    	} else if(Command.equals("delete")) {
 			   		//delete method
-		    		myRegister = myMethods.DeleteCommmand(myRegister);
+		    		myRegister = myMethods.DeleteCommmand( myRegister );
 		    		makeRegister.printRegister( myRegister );
 		    	} else if(Command.equals("list")) {
 		    		//list method
@@ -36,6 +36,7 @@ public class DogRun {
 		    		System.out.print("\nGoodbye!");
 					quit = "yes";
 		    	}
+		    	
 		    } else {
 		    	System.out.print("The command you entered is not valid. Please try again!\n");
 		    }
