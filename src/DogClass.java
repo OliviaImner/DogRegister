@@ -14,6 +14,17 @@ public class DogClass {
 		Weight = newWeight;
 	}
 	
+	 //setter for tail length
+	public void calculateTailLength(String Breed, int Age, double Weight){
+		double length;
+		if( Breed.equals("tax")) {
+			length = 3.7; 
+	    } else { 
+ 	    	length = (Age * Weight) / 10;
+ 	    }
+		this.TailLength = length;
+	}
+	
 	//getter for DogClass Name attribute
 	public String getName() {
 		return Name;
@@ -22,17 +33,6 @@ public class DogClass {
 	//getter for DogClass TailLength attribute
 	public double getTailLength() {
 		return TailLength;
-	}
-		
-    //setter for tail length
-	public void calculateTailLength(String Breed, int Age, double Weight){
-		double length;
-		if( Breed.equals("tax")) {
-			length = 3.7; 
- 	    } else { 
- 	    	length = (Age * Weight) / 10;
- 	    }
-		this.TailLength = length;
 	}
 	
 	//Print class variables to screen

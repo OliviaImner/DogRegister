@@ -2,25 +2,25 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class DogMethods {
-	Scanner Keyboard = new Scanner(System.in);
+	
+	Scanner keyboard = new Scanner(System.in);
 
 	//register methods
 	ArrayList<DogClass> RegisterCommmand(ArrayList<DogClass> currentRegister) {
 			
-			System.out.print("Please enter name: ");
-		    String Name = Keyboard.nextLine();
+			System.out.print("Please enter the dog's name: ");
+		    String Name = keyboard.nextLine();
 		    
-		    System.out.print("Please enter breed: ");
-		    String Breed = Keyboard.nextLine();
+		    System.out.print("Please enter the dog's breed: ");
+		    String Breed = keyboard.nextLine();
 		    
-		    System.out.print("Please enter age: " );
-		    int Age = Keyboard.nextInt();
-		    Keyboard.nextLine();
+		    System.out.print("Please enter the dog's age: " );
+		    int Age = keyboard.nextInt();
+		    keyboard.nextLine();
 	
-		    System.out.print("Please enter weight: " );
-		    int Weight = Keyboard.nextInt();
-		    Keyboard.nextLine();
-			//Keyboard.close(); //closing standard in here results in an error since its still needed in "main"
+		    System.out.print("Please enter the dog's weight: " );
+		    int Weight = keyboard.nextInt();
+		    keyboard.nextLine();
 
 			DogClass newDog = new DogClass(Name, Breed, Age, Weight);
 			newDog.calculateTailLength(Breed, Age, Weight);
@@ -32,7 +32,7 @@ public class DogMethods {
 	//delete methods
 	ArrayList<DogClass> DeleteCommmand(ArrayList<DogClass> currentRegister) {
 		System.out.print("Please enter the name of the dog you want to delete from the register: ");
-	    String toDelete = Keyboard.nextLine();
+	    String toDelete = keyboard.nextLine();
 	    
 		int size = currentRegister.size();
 		if(size > 0) {
@@ -45,8 +45,9 @@ public class DogMethods {
 					break loop;
 				}
 			}
+		
 		} else {
-			System.out.print("The register is currently empty and, therefore, you cannot delete any entries\n");
+			System.out.print("The register is currently empty and, therefore, you cannot delete any entries\n\n");
 		}
 		
 		return currentRegister;
@@ -55,8 +56,8 @@ public class DogMethods {
 	//list method
 	void ListCommand(ArrayList<DogClass> currentRegister) {
 		System.out.print("Please enter a tail length: ");
-		int userTailLength = Keyboard.nextInt();
-	    Keyboard.nextLine();
+		int userTailLength = keyboard.nextInt();
+	    keyboard.nextLine();
 	    
 	    int size = currentRegister.size();
 		for( int i=0; i < size; i++ ) {
@@ -68,5 +69,6 @@ public class DogMethods {
 			}
 		}
 	}
-
+	
+//keyboard.close();
 }

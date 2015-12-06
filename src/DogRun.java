@@ -4,20 +4,21 @@ import java.util.ArrayList;
 public class DogRun {
 
 	public static void main(String[] args) {
+		
 		//make primary register
 		DogRegister makeRegister = new DogRegister();
 		ArrayList<DogClass> myRegister = makeRegister.makePrimaryRegister();
 		makeRegister.printRegister( myRegister );
 		
-		
 		//load methods
 		DogMethods myMethods = new DogMethods();
 				
+		//start program for user
 		Scanner keyboard = new Scanner(System.in);
 		String quit = "no";
 		while(quit.equals("no")) {
 			System.out.print("What do you want to do?\n\n" );
-			System.out.print("Please type \"quit\", \"register\", \"list\" or, \"delete\"\n\n");
+			System.out.print("Please type \"quit\", \"register\", \"list\" or, \"delete\".\n\n");
 		    String Command = keyboard.nextLine();
 				    
 		    if(Command.equals("quit") || Command.equals("register") || Command.equals("list") || Command.equals("delete")) {
@@ -35,6 +36,7 @@ public class DogRun {
 		    	} else {
 		    		//exit
 		    		System.out.print("\nGoodbye!");
+		    		keyboard.close();
 					quit = "yes";
 		    	}
 		    	
