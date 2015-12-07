@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 
 public class DogClass {
 	private String Name;
@@ -13,6 +14,8 @@ public class DogClass {
 		Age = newAge;
 		Weight = newWeight;
 	}
+	
+	DecimalFormat sum = new DecimalFormat("0.###");
 	
 	 //setter for tail length
 	public void calculateTailLength(String Breed, int Age, double Weight){
@@ -37,7 +40,7 @@ public class DogClass {
 	
 	//Print class variables to screen
 	void printToScreen() {
-		System.out.println(Name + "\t" + Breed + "\t" + Age + "\t" + Weight + "\t" + TailLength + "\n"); 
+		System.out.print(Name + "\t" + Breed + "\t" + Age + "\t" + Weight + "\t" +  sum.format(TailLength) + "\n"); 
 	}
 	
 }
