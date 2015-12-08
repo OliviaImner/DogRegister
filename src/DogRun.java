@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+//Olivia Imner olim9472
 
 public class DogRun {
 

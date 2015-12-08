@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+//Olivia Imner olim9472
 
 public class DogMethods {
 	
@@ -24,8 +25,9 @@ public class DogMethods {
 
 			DogClass newDog = new DogClass(Name, Breed, Age, Weight);
 			newDog.calculateTailLength(Breed, Age, Weight);
+			
+			//add the new dog to the register
 			currentRegister.add(newDog);
-
 		    return currentRegister;
 		}
 	
@@ -35,6 +37,7 @@ public class DogMethods {
 	    String toDelete = keyboard.nextLine();
 	    
 		int size = currentRegister.size();
+		// check if the register is empty
 		if(size > 0) {
 			//check if dog exists in current register
 			String found = "no";
@@ -47,21 +50,22 @@ public class DogMethods {
 					break loop1;
 				}
 			}
-			//if the dog was found, continue, otherwise, print a warning
+			//if the dog was found delete the dog
 			if(found.equals("yes")) {
 				loop2:
 				for( int i=0; i < size; i++ ) {
 					DogClass currentDog = currentRegister.get(i);
 					String dogName = currentDog.getName();
 					if(dogName.equals(toDelete)){
+						//remove the dog from the register
 						currentRegister.remove(i);
 						break loop2;
 					} 
 				}
-			} else {
+			} else { //if the dog isn't found
 				System.out.print("The dog you want to delete could not be found!\n\n");
 			}
-		} else {
+		} else { // if the register is empty
 			System.out.print("The register is currently empty and, therefore, you cannot delete any entries\n\n");
 		}
 		
@@ -79,6 +83,7 @@ public class DogMethods {
 			DogClass currentDog = currentRegister.get(i);
 			double currentTailLength = currentDog.getTailLength();
 			
+			// print out the list of the longest tail lengths
 			if(currentTailLength >= userTailLength) {
 				currentDog.printToScreen();
 			}

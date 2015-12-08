@@ -1,5 +1,7 @@
 import java.text.DecimalFormat;
+//Olivia Imner olim9472
 
+// define the attributes 
 public class DogClass {
 	private String Name;
 	private String Breed;  
@@ -14,8 +16,6 @@ public class DogClass {
 		Age = newAge;
 		Weight = newWeight;
 	}
-	
-	DecimalFormat sum = new DecimalFormat("0.###");
 	
 	 //setter for tail length
 	public void calculateTailLength(String Breed, int Age, double Weight){
@@ -39,6 +39,9 @@ public class DogClass {
 	}
 	
 	//Print class variables to screen
+	// writes out numbers with two decimals. 
+	DecimalFormat sum = new DecimalFormat("0.##");
+	
 	void printToScreen() {
 		System.out.print(Name + "\t" + Breed + "\t" + Age + "\t" + Weight + "\t" +  sum.format(TailLength) + "\n"); 
 	}
