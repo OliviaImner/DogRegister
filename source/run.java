@@ -36,7 +36,7 @@ public class run {
 					userMethods.listCommand( dogRegister );
 				} else {
 					//exit
-					System.out.print("\nGoodbye!");
+					System.out.print("\nGoodbye!\n");
 					keyboard.close();
 					quit = "yes";
 				}

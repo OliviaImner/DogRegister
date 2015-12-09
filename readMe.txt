@@ -1,10 +1,13 @@
 
-Koden finns på Github vid: https://github.com/OliviaImner/DogRegister
+Koden finns också på Github vid: https://github.com/OliviaImner/DogRegister
 
-Dessa kod utvecklades för att uppfylla de krav beskriven i uppgiften här under.
+Koden kan kompileras och köras genom att, i terminalen skriva:
 
+cd /pathToProgramsRootDirectory
+javac -sourcepath source source/run.java
+java -cp source run
 
-
+Dessa kod utvecklades för att uppfylla de krav beskriven i uppgiften här under:
 
 Instruktioner
 Den andra uppgiften går ut på att skriva ett program som hanterar ett litet register över hundar som finns på en kennel. Registret ska använda sig av en klass för att representera hundarna. För varje hund skall finnas attribut för namn, ras, ålder och vikt samt svanslängd. (Observera att attribut inte alltid måste motsvaras av en variabel.) Svanslängden för en hund kan räknas ut med den fiffiga formeln: 
