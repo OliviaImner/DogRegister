@@ -2,29 +2,29 @@ import java.util.Scanner;
 import java.util.ArrayList;
 //Olivia Imner olim9472
 
-public class DogMethods {
+public class methods {
 	
 	Scanner keyboard = new Scanner(System.in);
 
 	//register methods
-	ArrayList<DogClass> RegisterCommmand(ArrayList<DogClass> currentRegister) {
+	ArrayList<dog> registerCommmand(ArrayList<dog> currentRegister) {
 			
 			System.out.print("Please enter the dog's name: ");
-		    String Name = keyboard.nextLine();
+      String name = keyboard.nextLine();
 		    
-		    System.out.print("Please enter the dog's breed: ");
-		    String Breed = keyboard.nextLine();
+      System.out.print("Please enter the dog's breed: ");
+      String breed = keyboard.nextLine();
 		    
-		    System.out.print("Please enter the dog's age: " );
-		    int Age = keyboard.nextInt();
-		    keyboard.nextLine();
+      System.out.print("Please enter the dog's age: " );
+      int age = keyboard.nextInt();
+      keyboard.nextLine();
 	
-		    System.out.print("Please enter the dog's weight: " );
-		    int Weight = keyboard.nextInt();
-		    keyboard.nextLine();
+      System.out.print("Please enter the dog's weight: " );
+      int weight = keyboard.nextInt();
+      keyboard.nextLine();
 
-			DogClass newDog = new DogClass(Name, Breed, Age, Weight);
-			newDog.calculateTailLength(Breed, Age, Weight);
+			dog newDog = new dog(name, breed, age, weight);
+			newDog.calculateTailLength(breed, age, weight);
 			
 			//add the new dog to the register
 			currentRegister.add(newDog);
@@ -32,9 +32,9 @@ public class DogMethods {
 		}
 	
 	//delete methods
-	ArrayList<DogClass> DeleteCommmand(ArrayList<DogClass> currentRegister) {
+	ArrayList<dog> deleteCommmand(ArrayList<dog> currentRegister) {
 		System.out.print("Please enter the name of the dog you want to delete from the register:\n");
-	    String toDelete = keyboard.nextLine();
+    String toDelete = keyboard.nextLine();
 	    
 		int size = currentRegister.size();
 		// check if the register is empty
@@ -43,7 +43,7 @@ public class DogMethods {
 			String found = "no";
 			loop1:
 			for( int i=0; i < size; i++ ) {
-				DogClass currentDog = currentRegister.get(i);
+				dog currentDog = currentRegister.get(i);
 				String dogName = currentDog.getName();
 				if(dogName.equals(toDelete)) {
 					found = "yes";
@@ -54,7 +54,7 @@ public class DogMethods {
 			if(found.equals("yes")) {
 				loop2:
 				for( int i=0; i < size; i++ ) {
-					DogClass currentDog = currentRegister.get(i);
+					dog currentDog = currentRegister.get(i);
 					String dogName = currentDog.getName();
 					if(dogName.equals(toDelete)){
 						//remove the dog from the register
@@ -73,14 +73,14 @@ public class DogMethods {
 	}
 	
 	//list method
-	void ListCommand(ArrayList<DogClass> currentRegister) {
+	void listCommand(ArrayList<dog> currentRegister) {
 		System.out.print("Please enter a tail length: ");
 		int userTailLength = keyboard.nextInt();
-	    keyboard.nextLine();
+    keyboard.nextLine();
 	    
-	    int size = currentRegister.size();
+    int size = currentRegister.size();
 		for( int i=0; i < size; i++ ) {
-			DogClass currentDog = currentRegister.get(i);
+			dog currentDog = currentRegister.get(i);
 			double currentTailLength = currentDog.getTailLength();
 			
 			// print out the list of the longest tail lengths
