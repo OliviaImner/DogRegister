@@ -4,10 +4,10 @@ import java.util.ArrayList;
 public class register {
 	
 	//initial values
-		String[] nameArray = {"Fido", "Mary", "John", "Ginger", "Jake"};
-		String[] breedArray = {"tax", "pitbull", "mastif", "bulldog", "colie"};
-		int[] ageArray = {1,2,3,4,5};
-		double[] weightArray = {10.1, 20.1, 30.1, 40.1, 50.1};
+	String[] nameArray = {"Fido", "Mary", "John", "Ginger", "Jake"};
+	String[] breedArray = {"tax", "pitbull", "mastif", "bulldog", "colie"};
+	int[] ageArray = {1,2,3,4,5};
+	double[] weightArray = {10.1, 20.1, 30.1, 40.1, 50.1};
 		
 		
 	//make primary register
@@ -15,7 +15,7 @@ public class register {
 		//declare the arraylist
 		ArrayList<dog> dogArrayList = new ArrayList<dog>();
 		
-		 //Create dog objects, and place in array list 
+		//Create dog objects, and place in array list 
 		for( int i=0; i<5; i++ ) {
 			
 			//give the attributes of currentDog the values of nameArray[i] etc.
@@ -32,7 +32,7 @@ public class register {
 	public void printRegister(ArrayList<dog> currentRegister) {
 		int size = currentRegister.size();
 		System.out.print("The register currently includes:\n" );
-    System.out.print("Name\tBreed\tAge\tWeight\tTail Length\n");
+		System.out.print("Name\tBreed\tAge\tWeight\tTail Length\n");
 		for( int i=0; i < size; i++ ) {
 			dog currentDog = currentRegister.get(i);
 			currentDog.printToScreen();

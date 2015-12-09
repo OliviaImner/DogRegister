@@ -9,32 +9,32 @@ public class methods {
 	//register methods
 	ArrayList<dog> registerCommmand(ArrayList<dog> currentRegister) {
 			
-			System.out.print("Please enter the dog's name: ");
-      String name = keyboard.nextLine();
+		System.out.print("Please enter the dog's name: ");
+		String name = keyboard.nextLine();
 		    
-      System.out.print("Please enter the dog's breed: ");
-      String breed = keyboard.nextLine();
+		System.out.print("Please enter the dog's breed: ");
+		String breed = keyboard.nextLine();
 		    
-      System.out.print("Please enter the dog's age: " );
-      int age = keyboard.nextInt();
-      keyboard.nextLine();
+		System.out.print("Please enter the dog's age: " );
+		int age = keyboard.nextInt();
+		keyboard.nextLine();
 	
-      System.out.print("Please enter the dog's weight: " );
-      int weight = keyboard.nextInt();
-      keyboard.nextLine();
+		System.out.print("Please enter the dog's weight: " );
+		int weight = keyboard.nextInt();
+		keyboard.nextLine();
 
-			dog newDog = new dog(name, breed, age, weight);
-			newDog.calculateTailLength(breed, age, weight);
+		dog newDog = new dog(name, breed, age, weight);
+		newDog.calculateTailLength(breed, age, weight);
 			
-			//add the new dog to the register
-			currentRegister.add(newDog);
-		    return currentRegister;
-		}
+		//add the new dog to the register
+		currentRegister.add(newDog);
+	    return currentRegister;
+	}
 	
 	//delete methods
 	ArrayList<dog> deleteCommmand(ArrayList<dog> currentRegister) {
 		System.out.print("Please enter the name of the dog you want to delete from the register:\n");
-    String toDelete = keyboard.nextLine();
+		String toDelete = keyboard.nextLine();
 	    
 		int size = currentRegister.size();
 		// check if the register is empty
@@ -76,9 +76,9 @@ public class methods {
 	void listCommand(ArrayList<dog> currentRegister) {
 		System.out.print("Please enter a tail length: ");
 		int userTailLength = keyboard.nextInt();
-    keyboard.nextLine();
+		keyboard.nextLine();
 	    
-    int size = currentRegister.size();
+		int size = currentRegister.size();
 		for( int i=0; i < size; i++ ) {
 			dog currentDog = currentRegister.get(i);
 			double currentTailLength = currentDog.getTailLength();
